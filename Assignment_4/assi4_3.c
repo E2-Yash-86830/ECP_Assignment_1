@@ -6,7 +6,7 @@ float cal(float a, float b, char op){
 	case '-': return a - b;
 	case '*': return a * b;
 	case '/': return a / b;
-	default: return 0;
+	
   }
 }
 int main(){
