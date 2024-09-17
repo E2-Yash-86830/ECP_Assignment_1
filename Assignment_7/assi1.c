@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to accept a 2-D array from the user
+
 void accept_2d_array(int rows, int cols, int arr[rows][cols]) {
     printf("Enter elements for a %dx%d matrix:\n", rows, cols);
     for (int i = 0; i < rows; i++) {
@@ -12,7 +12,6 @@ void accept_2d_array(int rows, int cols, int arr[rows][cols]) {
     }
 }
 
-// Function to print a 2-D array
 void print_2d_array(int rows, int cols, int arr[rows][cols]) {
     printf("Matrix:\n");
     for (int i = 0; i < rows; i++) {
@@ -27,7 +26,7 @@ int main() {
     int rows = 3;
     int cols = 3;
     
-    // Dynamically allocate memory for the 2-D array
+    
     int (*matrix)[cols] = malloc(rows * sizeof(*matrix));
     
     if (matrix == NULL) {
@@ -35,11 +34,9 @@ int main() {
         return 1;
     }
 
-    // Accept and print the matrix using the defined functions
     accept_2d_array(rows, cols, matrix);
     print_2d_array(rows, cols, matrix);
 
-    // Free allocated memory
     free(matrix);
 
     return 0;
